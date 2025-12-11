@@ -10,7 +10,7 @@ import { SettingsScreen } from './screens/SettingsScreen';
 import { BottomNav } from './components/BottomNav';
 
 // Wrapper for protected routes
-const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
+const PrivateRoute = ({ children }: { children?: React.ReactNode }) => {
   const { isAuthenticated } = useAuth();
   return isAuthenticated ? <>{children}</> : <Navigate to="/login" />;
 };

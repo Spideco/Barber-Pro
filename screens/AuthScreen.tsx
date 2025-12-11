@@ -24,12 +24,12 @@ export const AuthScreen = () => {
     e.preventDefault();
     // Simulate auth logic
     if (email && password) {
-       login(email, isLogin ? 'Cliente BarberPro' : name);
+       login(email, isLogin ? 'Cliente Navalha Prime' : name);
     }
   };
 
   const handleTestLogin = () => {
-    login('teste@barberpro.com', 'Usuário de Teste');
+    login('teste@navalhaprime.com', 'Usuário de Teste');
   };
 
   return (
@@ -38,7 +38,7 @@ export const AuthScreen = () => {
         <div className="mx-auto bg-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-xl shadow-primary/20">
           <Scissors className="text-primary-foreground" size={32} />
         </div>
-        <h1 className="text-4xl font-bold text-foreground mb-2 tracking-tight">BarberPro</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-2 tracking-tight">Navalha Prime</h1>
         <p className="text-muted-foreground">Agende seu estilo em segundos.</p>
       </div>
 
