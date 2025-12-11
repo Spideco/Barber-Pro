@@ -1,0 +1,5 @@
+{
+  "name": "BarberPro",
+  "description": "Uma aplicação web mobile minimalista para agendamento de barbearia, permitindo seleção de barbeiros, serviços e gestão de perfil com uma interface limpa e moderna.",
+  "requestFramePermissions": []
+}

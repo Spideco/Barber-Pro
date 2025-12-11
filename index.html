@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>BarberPro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Arya', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              mono: ['Roboto Mono', 'monospace'],
+            },
+            colors: {
+              border: 'var(--border)',
+              input: 'var(--input)',
+              ring: 'var(--ring)',
+              background: 'var(--background)',
+              foreground: 'var(--foreground)',
+              primary: {
+                DEFAULT: 'var(--primary)',
+                foreground: 'var(--primary-foreground)',
+              },
+              secondary: {
+                DEFAULT: 'var(--secondary)',
+                foreground: 'var(--secondary-foreground)',
+              },
+              destructive: {
+                DEFAULT: 'var(--destructive)',
+                foreground: 'var(--destructive-foreground)',
+              },
+              muted: {
+                DEFAULT: 'var(--muted)',
+                foreground: 'var(--muted-foreground)',
+              },
+              accent: {
+                DEFAULT: 'var(--accent)',
+                foreground: 'var(--accent-foreground)',
+              },
+              popover: {
+                DEFAULT: 'var(--popover)',
+                foreground: 'var(--popover-foreground)',
+              },
+              card: {
+                DEFAULT: 'var(--card)',
+                foreground: 'var(--card-foreground)',
+              },
+            },
+            borderRadius: {
+              lg: 'var(--radius)',
+              md: 'calc(var(--radius) - 2px)',
+              sm: 'calc(var(--radius) - 4px)',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        --background: oklch(1.0000 0 0);
+        --foreground: oklch(0.2115 0.0072 264.4099);
+        --card: oklch(0.9848 0 0);
+        --card-foreground: oklch(0.2115 0.0072 264.4099);
+        --popover: oklch(1.0000 0 0);
+        --popover-foreground: oklch(0.2115 0.0072 264.4099);
+        --primary: oklch(0.6356 0.2082 25.3782);
+        --primary-foreground: oklch(0.9848 0 0);
+        --secondary: oklch(0.5546 0.1629 253.5932);
+        --secondary-foreground: oklch(0.9848 0 0);
+        --muted: oklch(0.9686 0.0035 247.8590);
+        --muted-foreground: oklch(0.5403 0.0360 256.8111);
+        --accent: oklch(0.9686 0.0035 247.8590);
+        --accent-foreground: oklch(0.2115 0.0072 264.4099);
+        --destructive: oklch(0.6356 0.2082 25.3782);
+        --destructive-foreground: oklch(0.9848 0 0);
+        --border: oklch(0.9210 0.0088 247.9219);
+        --input: oklch(0.9210 0.0088 247.9219);
+        --ring: oklch(0.6356 0.2082 25.3782);
+        --radius: 0.5rem;
+        --tracking-normal: 0.05em;
+      }
+
+      .dark {
+        --background: oklch(0.2115 0.0072 264.4099);
+        --foreground: oklch(0.9848 0 0);
+        --card: oklch(0.2639 0.0102 264.3844);
+        --card-foreground: oklch(0.9848 0 0);
+        --popover: oklch(0.2115 0.0072 264.4099);
+        --popover-foreground: oklch(0.9848 0 0);
+        --primary: oklch(0.6356 0.2082 25.3782);
+        --primary-foreground: oklch(0.9848 0 0);
+        --secondary: oklch(0.5546 0.1629 253.5932);
+        --secondary-foreground: oklch(0.9848 0 0);
+        --muted: oklch(0.3137 0.0183 256.8010);
+        --muted-foreground: oklch(0.7133 0.0261 256.7642);
+        --accent: oklch(0.3137 0.0183 256.8010);
+        --accent-foreground: oklch(0.9848 0 0);
+        --destructive: oklch(0.6356 0.2082 25.3782);
+        --destructive-foreground: oklch(0.9848 0 0);
+        --border: oklch(0.3616 0.0221 256.8045);
+        --input: oklch(0.3616 0.0221 256.8045);
+        --ring: oklch(0.6356 0.2082 25.3782);
+      }
+
+      body {
+        font-family: 'Arya', sans-serif;
+        background-color: var(--background);
+        color: var(--foreground);
+        letter-spacing: var(--tracking-normal);
+        -webkit-tap-highlight-color: transparent;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react": "https://esm.sh/react@^19.2.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.559.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
